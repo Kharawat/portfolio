@@ -159,7 +159,7 @@ p { margin-top: 0; }
 
 .skills-section { background: var(--soft); border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); max-width: none; }
 .skills-section > * { margin-left: auto; margin-right: auto; max-width: 1180px; }
-.skill-columns { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1.8rem; }
+.skill-columns { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.8rem; }
 .skill-columns div { background: var(--surface); border: 1px solid var(--line); min-height: 190px; padding: 1.3rem; }
 .contact-section { border-top: 1px solid var(--line); }
 .copy-status { color: var(--olive); font-weight: 600; grid-column: 2; margin: 0; min-height: 1.5rem; }
@@ -187,4 +187,29 @@ p { margin-top: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
+
+/* Project cards without a public link */
+.project-links span { color: var(--muted); font-size: 0.84rem; font-weight: 600; }
+
+/* Experience and education */
+.experience-section { border-top: 1px solid var(--line); }
+.experience-grid { align-items: start; display: grid; gap: 1rem; grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr); margin-top: 1.8rem; }
+.timeline { display: grid; gap: 1rem; }
+.timeline article, .education-card { background: var(--surface); border: 1px solid var(--line); padding: 1.35rem; position: relative; }
+.timeline article::before { background: var(--olive); content: ""; display: block; height: 2px; left: 1.35rem; position: absolute; right: 1.35rem; top: 0; }
+.timeline-head { align-items: baseline; display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; justify-content: space-between; margin-top: 0.55rem; }
+.timeline-head h3 { margin-bottom: 0; }
+.timeline-period { color: var(--terracotta); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; white-space: nowrap; }
+.timeline-org { color: var(--muted); font-size: 0.92rem; margin: 0.35rem 0 0.95rem; }
+.timeline ul { color: var(--muted); margin: 0; padding-left: 1.1rem; }
+.timeline li + li { margin-top: 0.45rem; }
+.education-card h3 { margin-bottom: 0.5rem; }
+.education-card p { color: var(--muted); margin-bottom: 0.7rem; }
+.education-card p.panel-label { margin-bottom: 0.9rem; }
+.education-card .panel-label:not(:first-child) { margin-top: 1.4rem; }
+.education-card strong { color: var(--ink); }
+
+@media (max-width: 980px) {
+  .experience-grid { grid-template-columns: 1fr; }
 }
