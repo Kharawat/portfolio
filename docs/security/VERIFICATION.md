@@ -14,7 +14,7 @@ No dependency upgrade required: no dependency manifest/runtime package graph in 
 
 ## CI activation pending repository authorization
 
-The complete security workflow is prepared at [security-workflow.yml](security-workflow.yml), but is not active. GitHub rejected the local OAuth credential because it lacks the workflow scope; the connected GitHub app also cannot write the private repository. No account scope was broadened. A maintainer with workflow write permission can add the exact reviewed file as .github/workflows/security.yml on this PR branch, then run/check it before merging. The template has no deployment or production-secret step. Dependabot configuration is included; it becomes effective after a reviewed merge into the default branch. Local security tests/scans passed; no successful GitHub Actions run is claimed.
+The complete security workflow is prepared at [security-workflow.yml](security-workflow.yml), but is not active. GitHub rejected the local OAuth credential because it lacks the workflow scope; the connected GitHub app also rejected creating this public repository's workflow with HTTP 403. No account scope was broadened. A maintainer with workflow write permission can add the exact reviewed file as .github/workflows/security.yml on this PR branch, then run/check it before merging. The template has no deployment or production-secret step. Dependabot configuration is included; it becomes effective after a reviewed merge into the default branch. Local security tests/scans passed; no successful GitHub Actions run is claimed.
 
 ## Second review
 
@@ -22,6 +22,6 @@ Reviewed the final diff for secret additions, authentication/authorization, inpu
 
 ## Remaining risks
 
-Meta CSP cannot set frame-ancestors; HTTPS/nosniff/framing policy requires host control. Native GitHub secret scanning/push protection was disabled in inspected metadata; no setting was changed.
+Meta CSP cannot set frame-ancestors; HTTPS/nosniff/framing policy requires host control. Native GitHub secret scanning and push protection were enabled on 2026-10-03 and independently read back as enabled. The alert listing returned no alerts at that time. No paid features or OAuth scope expansion were performed. Security Actions still require workflow write permission.
 
 The assessment is not a penetration test of running services, a complete formal proof, or a production security certification. Git scans cover fetched reachable refs, not deleted/unavailable history. No live secret was confirmed; never interpret a clean scan as proof of absence.
