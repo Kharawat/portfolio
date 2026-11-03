@@ -246,6 +246,16 @@ em { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-s
 .project-foot a { color: var(--ink); }
 .project-foot a:hover { color: var(--accent); }
 
+/* RB19 passion card */
+.v-photo { margin: 0; background: #0d0d10; }
+.v-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; transition: transform 0.6s; }
+.project:hover .v-photo img { transform: scale(1.03); }
+.project-visual.v-photo > * { transition: transform 0.6s; }
+.project:hover .project-visual.v-photo > .photo-credit { transform: none; }
+.photo-credit { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 12px 7px; font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.02em; color: rgba(255,255,255,0.75); background: linear-gradient(transparent, rgba(0,0,0,0.6)); }
+.photo-credit a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.passion .tag-row span:first-child { color: var(--btn-ink); background: var(--accent); padding: 1px 6px; border-radius: 2px; }
+
 /* Project visuals (pure CSS illustrations) */
 .project:hover .project-visual > * { transform: translateY(-3px); }
 .project-visual > * { transition: transform 0.4s; }
@@ -393,6 +403,7 @@ em { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-s
   .section { padding-block: 56px; }
   .section-head { margin-bottom: 32px; }
   .lede { font-size: 16px; }
+  .project-visual.v-photo { aspect-ratio: 16 / 9; }
   .project-grid { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .feature-grid article { min-height: 150px; padding: 18px var(--gutter); }
