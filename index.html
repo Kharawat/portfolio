@@ -6,6 +6,8 @@
     <meta name="description" content="Kharawat (Phoom) Areewongs: Mechanical Engineering graduate in Bangkok working across infrastructure operations, operational data reconciliation, and AI workflow automation." />
     <meta name="keywords" content="Mechanical Engineering, Infrastructure Operations, Data Automation, Python, pandas, Google Apps Script, LINE Messaging API, predictive maintenance, dashboard, workflow automation, Bangkok" />
     <meta name="author" content="Kharawat Areewongs" />
+    <meta name="theme-color" content="#f2f1ee" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href="https://kharawat.github.io/portfolio/" />
     <meta property="og:title" content="Kharawat Areewongs | Mechanical Engineering &amp; Data Automation" />
     <meta property="og:description" content="Portfolio of maintenance analytics, operations data reconciliation, and AI automation systems." />
@@ -14,8 +16,14 @@
     <title>Kharawat Areewongs | Mechanical Engineering &amp; Data Automation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        const t = localStorage.getItem("theme");
+        if (t) document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -34,211 +42,310 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Kharawat Areewongs portfolio home">Kharawat Areewongs</a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="logo" href="#top" aria-label="Kharawat Areewongs, back to top">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 28 L14 4 H20 L10 28 Z M16 28 L22 14 H28 L22 28 Z" /></svg>
+      </a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
+        <a href="#top" class="is-current">Home</a>
         <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
         <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#stack">Stack</a>
       </nav>
+      <div class="header-end">
+        <a class="header-link" href="https://github.com/Kharawat" target="_blank" rel="noreferrer">GitHub</a>
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>
+        </button>
+        <a class="header-cta" href="#contact">Contact</a>
+        <button class="icon-button nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
     </header>
 
     <main id="top">
-      <section class="hero" aria-label="Portfolio introduction">
-        <div class="hero-content">
-          <p class="eyebrow">Mechanical Engineering · Infrastructure Operations · Data Automation</p>
-          <h1>Engineering discipline for operations, data, and the workflows around them.</h1>
+      <!-- HERO -->
+      <section class="hero" aria-label="Introduction">
+        <div class="rings" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="floaters" aria-hidden="true">
+          <div class="floater f1">
+            <div class="mini-head"><i></i>health_score.py</div>
+            <div class="mini-bars"><b style="--h:70%"></b><b style="--h:45%"></b><b style="--h:88%"></b><b style="--h:30%"></b><b style="--h:62%"></b><b style="--h:92%"></b></div>
+          </div>
+          <div class="floater f2">
+            <div class="mini-head"><i></i>LINE · auto-reply</div>
+            <p class="bubble">Is the mango one sold out?</p>
+            <p class="bubble me">Still 12 left today 🥭</p>
+          </div>
+          <div class="floater f3 photo"><img src="assets/hero-workspace.png" alt="" loading="lazy" /></div>
+          <div class="floater f4">
+            <div class="mini-head"><i></i>reconcile.csv</div>
+            <div class="mini-rows"><span>POS</span><span>12,480</span><span>Stock</span><span>12,480</span><span>Receipts</span><span class="warn">12,320</span></div>
+          </div>
+          <div class="floater f5">
+            <div class="mini-head"><i></i>eval · regression</div>
+            <p class="score">47<small>/48 pass</small></p>
+          </div>
+        </div>
+
+        <div class="hero-inner">
+          <p class="wordmark" aria-hidden="true">KHARAWAT</p>
+          <h1>Practical systems <em>for real operations.</em></h1>
           <p class="hero-copy">
-            I am a Mechanical Engineering graduate in Bangkok with hands-on experience in industrial
-            maintenance, operational data reconciliation, and workflow automation. I build practical
-            Python, Google Apps Script, and LINE-based tools that investigate discrepancies, standardize
-            processes, and make reporting visible.
+            Mechanical Engineering graduate in Bangkok. I keep machines, data and day-to-day
+            operations honest, and build the Python, Apps Script and AI tools that do it.
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#projects">View projects</a>
-            <a class="button secondary" href="https://github.com/Kharawat" target="_blank" rel="noreferrer">GitHub profile</a>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#projects">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" /></svg>
+              View projects
+            </a>
+            <a class="btn btn-line" href="https://github.com/Kharawat" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" /></svg>
+              GitHub profile
+            </a>
           </div>
-        </div>
-        <aside class="hero-panel" aria-label="Current focus">
-          <p class="panel-label">Core focus</p>
-          <div class="signal-grid">
-            <span>Mechanical Engineering</span>
-            <span>Infrastructure Operations</span>
-            <span>Data Automation</span>
-            <span>AI Workflows</span>
-          </div>
-          <div class="system-line"><span>Input</span><strong>Machines, operations &amp; manual records</strong></div>
-          <div class="system-line"><span>Output</span><strong>Reliable processes &amp; clear reporting</strong></div>
-        </aside>
-      </section>
-
-      <section class="section intro-section" id="about">
-        <div class="section-copy">
-          <p class="eyebrow">Professional profile</p>
-          <h2>From the plant floor to the spreadsheet to the chatbot.</h2>
-          <p>
-            My background is mechanical engineering: preventive and corrective maintenance, equipment
-            inspection, and workplace safety. Since then I have run day-to-day operations for a sports
-            club, reconciled its POS, inventory, and receipt data with Python and pandas, and built AI
-            automation that answers customers on LINE. I bring safety awareness, ownership, and a
-            fast-learning mindset to technical infrastructure and operations environments.
+          <p class="meta-line">
+            <span>Bangkok, TH</span><span>Open to work</span><span>TH · EN · 中文</span>
           </p>
         </div>
-        <dl class="stats-list" aria-label="Core capabilities">
-          <div><dt>ENG</dt><dd>B.Eng. Mechanical Engineering, Zhejiang University of Technology, 2019 to 2025</dd></div>
-          <div><dt>OPS</dt><dd>Maintenance checks, process standardization, scheduling, and operational reporting</dd></div>
-          <div><dt>DATA</dt><dd>Python, pandas, Google Apps Script, anomaly detection, and AI workflow automation</dd></div>
-        </dl>
+
+        <ol class="side-index" aria-label="Sections">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#contact">Get in touch</a></li>
+        </ol>
       </section>
 
-      <section class="section edge-section">
-        <div class="section-heading">
-          <p class="eyebrow">Approach</p>
-          <h2>From a messy process to something usable.</h2>
+      <!-- TICKER -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Preventive maintenance</span><span>Python · pandas</span><span>Data reconciliation</span><span>Google Apps Script</span><span>LINE Messaging API</span><span>LLM evaluation</span><span>Next.js</span><span>Cloudflare Workers</span><span>SolidWorks</span><span>Anomaly detection</span>
+          <span>Preventive maintenance</span><span>Python · pandas</span><span>Data reconciliation</span><span>Google Apps Script</span><span>LINE Messaging API</span><span>LLM evaluation</span><span>Next.js</span><span>Cloudflare Workers</span><span>SolidWorks</span><span>Anomaly detection</span>
         </div>
-        <div class="edge-grid">
-          <article><span>01</span><h3>Investigate</h3><p>Inspect the equipment or the data, check its quality, and find where the numbers and the process disagree.</p></article>
-          <article><span>02</span><h3>Standardize</h3><p>Turn recurring manual work into a repeatable, documented process with clear checks and one place to look.</p></article>
-          <article><span>03</span><h3>Automate</h3><p>Connect tools, APIs, and AI where they save real time, and keep a person in the loop where it matters.</p></article>
-        </div>
-      </section>
+      </div>
 
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <p class="eyebrow">Selected projects</p>
-          <h2>Maintenance analytics, operations data, and AI automation</h2>
-        </div>
-        <div class="filter-group" aria-label="Project filters">
-          <button class="filter-button active" type="button" data-filter="all">All</button>
-          <button class="filter-button" type="button" data-filter="analysis">Data &amp; Analysis</button>
-          <button class="filter-button" type="button" data-filter="automation">AI &amp; Automation</button>
-        </div>
-        <div class="project-grid">
-          <article class="project-card" data-category="automation">
-            <div class="project-meta"><span>Featured</span><span>AI Automation</span></div>
-            <h3>Unified Chat Inbox</h3>
-            <p>Multi-tenant SaaS that pulls LINE OA, Facebook Messenger, and Instagram conversations into one inbox. An AI auto-reply bot answers from each shop's own menu and rules, and hands off to a person when it should. Running in production for a bottled-drinks shop on LINE.</p>
-            <ul class="tag-list" aria-label="Technologies"><li>TypeScript</li><li>Next.js</li><li>Cloudflare Workers</li><li>Supabase</li><li>LINE Messaging API</li><li>LLM</li></ul>
-            <div class="project-links">
-              <span>In production · private repository</span>
-            </div>
-          </article>
-          <article class="project-card" data-category="analysis">
-            <div class="project-meta"><span>Featured</span><span>Data Analysis</span></div>
-            <h3>AI Investment Value Chain Map</h3>
-            <p>Interactive dashboard mapping 12 AI-related stocks across 8 business layers, from chip manufacturing to consumer devices, with scenario analysis, a portfolio dependency matrix, and offline-capable installable PWA support.</p>
-            <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>PWA</li><li>Data visualization</li></ul>
-            <div class="project-links">
-              <a href="https://ai-value-chain-phoom.phoom1644.chatgpt.site/dashboard/" target="_blank" rel="noreferrer">Live demo</a>
-              <a href="https://github.com/Kharawat/ai-investment-value-chain-map-public" target="_blank" rel="noreferrer">GitHub repo</a>
-            </div>
-          </article>
-          <article class="project-card" data-category="analysis">
-            <div class="project-meta"><span>Machine Analytics</span><span>Data Analysis</span></div>
-            <h3>Predictive Maintenance Dashboard</h3>
-            <p>Explainable machine-sensor dashboard that turns temperature, vibration, RPM, and runtime readings into a transparent health score, a risk category, and a prioritised maintenance queue, with a matching Python analysis engine.</p>
-            <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>Python</li><li>Predictive maintenance</li></ul>
-            <div class="project-links">
-              <a href="https://kharawat.github.io/predictive-maintenance-dashboard/" target="_blank" rel="noreferrer">Live demo</a>
-              <a href="https://github.com/Kharawat/predictive-maintenance-dashboard" target="_blank" rel="noreferrer">GitHub repo</a>
-            </div>
-          </article>
-          <article class="project-card" data-category="analysis">
-            <div class="project-meta"><span>Operations Data</span><span>Data Analysis</span></div>
-            <h3>Automation &amp; Data Reconciliation, FBT Complex</h3>
-            <p>Repeatable workflow across POS, inventory, and receipts to investigate mismatches, anomalies, and revenue variances, plus integrated tracking of sessions, income, expenses, and calendar in one daily and monthly review.</p>
-            <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>pandas</li><li>Excel</li><li>Google Sheets</li><li>Google Apps Script</li></ul>
-            <div class="project-links">
-              <span>Internal work · The Eight Club (FBT Complex)</span>
-            </div>
-          </article>
-          <article class="project-card" data-category="automation">
-            <div class="project-meta"><span>AI Evaluation</span><span>AI Automation</span></div>
-            <h3>Prompt Evaluation Harness</h3>
-            <p>Standalone harness that scores a multi-tenant assistant prompt against YAML test cases: hard assertions plus a separate judge model, five-layer prompt assembly, a rate-limited gateway client, and a regression compare that fails only on new regressions.</p>
-            <ul class="tag-list" aria-label="Technologies"><li>TypeScript</li><li>Node.js</li><li>YAML</li><li>LLM evaluation</li></ul>
-            <div class="project-links">
-              <span>Private repository</span>
-            </div>
-          </article>
-          <article class="project-card" data-category="automation">
-            <div class="project-meta"><span>Workflow System</span><span>AI Automation</span></div>
-            <h3>AI Workflow Dashboard</h3>
-            <p>Standalone tool for tracking automation ideas, workflow status, expected impact, and delivery progress, so process improvement stays visible from idea to done.</p>
-            <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>Workflow design</li><li>LocalStorage</li></ul>
-            <div class="project-links">
-              <a href="https://kharawat.github.io/ai-workflow-dashboard/" target="_blank" rel="noreferrer">Live demo</a>
-              <a href="https://github.com/Kharawat/ai-workflow-dashboard" target="_blank" rel="noreferrer">GitHub repo</a>
-            </div>
-          </article>
-        </div>
-      </section>
+      <div class="frame">
+        <!-- 01 PROJECTS -->
+        <section class="section" id="projects">
+          <header class="section-head">
+            <p class="kicker"><span>01</span>/Projects</p>
+            <h2>Six builds. <em>One discipline.</em></h2>
+            <p class="lede">Maintenance analytics, operations data and AI automation, each one built to fix a real, recurring problem.</p>
+          </header>
 
-      <section class="section experience-section" id="experience">
-        <div class="section-heading">
-          <p class="eyebrow">Experience &amp; education</p>
-          <h2>Where the engineering and the operations work came from.</h2>
-        </div>
-        <div class="experience-grid">
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button class="chip is-active" type="button" data-filter="all">All <small>6</small></button>
+            <button class="chip" type="button" data-filter="analysis">Data &amp; analysis <small>3</small></button>
+            <button class="chip" type="button" data-filter="automation">AI &amp; automation <small>3</small></button>
+          </div>
+
+          <div class="project-grid">
+            <article class="project" data-category="automation">
+              <div class="project-visual v-chat" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>Featured</span><span>In production</span></p>
+                <h3>Unified Chat Inbox</h3>
+                <p>Multi-tenant SaaS that pulls LINE OA, Messenger and Instagram into one inbox. An AI bot replies from each shop's own menu and rules, and hands off to a person when it should.</p>
+                <ul class="stack"><li>Next.js</li><li>Cloudflare Workers</li><li>Supabase</li><li>LLM</li></ul>
+                <p class="project-foot">Private repository</p>
+              </div>
+            </article>
+
+            <article class="project" data-category="analysis">
+              <div class="project-visual v-chain" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>Featured</span><span>Dashboard</span></p>
+                <h3>AI Investment Value Chain Map</h3>
+                <p>12 AI-related stocks mapped across 8 business layers, from chips to devices, with scenario analysis, a dependency matrix and offline PWA support.</p>
+                <ul class="stack"><li>JavaScript</li><li>PWA</li><li>Data viz</li></ul>
+                <p class="project-foot">
+                  <a href="https://ai-value-chain-phoom.phoom1644.chatgpt.site/dashboard/" target="_blank" rel="noreferrer">Live demo ↗</a>
+                  <a href="https://github.com/Kharawat/ai-investment-value-chain-map-public" target="_blank" rel="noreferrer">Source ↗</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="project" data-category="analysis">
+              <div class="project-visual v-gauge" aria-hidden="true"><span></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>Machine analytics</span></p>
+                <h3>Predictive Maintenance Dashboard</h3>
+                <p>Turns temperature, vibration, RPM and runtime readings into an explainable health score, a risk category and a prioritised maintenance queue.</p>
+                <ul class="stack"><li>JavaScript</li><li>Python</li><li>Sensor data</li></ul>
+                <p class="project-foot">
+                  <a href="https://kharawat.github.io/predictive-maintenance-dashboard/" target="_blank" rel="noreferrer">Live demo ↗</a>
+                  <a href="https://github.com/Kharawat/predictive-maintenance-dashboard" target="_blank" rel="noreferrer">Source ↗</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="project" data-category="analysis">
+              <div class="project-visual v-table" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>Operations data</span></p>
+                <h3>Data Reconciliation, FBT Complex</h3>
+                <p>A repeatable workflow across POS, inventory and receipts to catch mismatches and revenue variances, plus one daily and monthly view of sessions, income and expenses.</p>
+                <ul class="stack"><li>Python</li><li>pandas</li><li>Google Sheets</li><li>Apps Script</li></ul>
+                <p class="project-foot">Internal work · The Eight Club</p>
+              </div>
+            </article>
+
+            <article class="project" data-category="automation">
+              <div class="project-visual v-eval" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>AI evaluation</span></p>
+                <h3>Prompt Evaluation Harness</h3>
+                <p>Scores the inbox assistant against YAML test cases with hard assertions and a judge model, and fails only on new regressions.</p>
+                <ul class="stack"><li>TypeScript</li><li>Node.js</li><li>YAML</li></ul>
+                <p class="project-foot">Private repository</p>
+              </div>
+            </article>
+
+            <article class="project" data-category="automation">
+              <div class="project-visual v-kanban" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>Workflow system</span></p>
+                <h3>AI Workflow Dashboard</h3>
+                <p>Tracks automation ideas, status, expected impact and delivery, so process improvement stays visible from idea to done.</p>
+                <ul class="stack"><li>JavaScript</li><li>LocalStorage</li></ul>
+                <p class="project-foot">
+                  <a href="https://kharawat.github.io/ai-workflow-dashboard/" target="_blank" rel="noreferrer">Live demo ↗</a>
+                  <a href="https://github.com/Kharawat/ai-workflow-dashboard" target="_blank" rel="noreferrer">Source ↗</a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 02 APPROACH -->
+        <section class="section" id="approach">
+          <header class="section-head">
+            <p class="kicker"><span>02</span>/Approach</p>
+            <h2>From a messy process <em>to something usable.</em></h2>
+          </header>
+          <div class="abc">
+            <article>
+              <p class="abc-letter">A</p>
+              <h3>Investigate</h3>
+              <p>Inspect the equipment or the data, check its quality, and find exactly where the numbers and the process disagree.</p>
+            </article>
+            <article>
+              <p class="abc-letter">B</p>
+              <h3>Standardize</h3>
+              <p>Turn recurring manual work into one documented, repeatable process with clear checks and one place to look.</p>
+            </article>
+            <article>
+              <p class="abc-letter">C</p>
+              <h3>Automate</h3>
+              <p>Connect tools, APIs and AI where they save real time, and keep a person in the loop where it matters.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- 03 EXPERIENCE -->
+        <section class="section" id="experience">
+          <header class="section-head">
+            <p class="kicker"><span>03</span>/Experience</p>
+            <h2>Plant floor, spreadsheet, <em>chatbot.</em></h2>
+            <p class="lede">Safety awareness, ownership and a fast-learning mindset, carried from industrial maintenance into operations and automation.</p>
+          </header>
+
           <div class="timeline">
-            <article>
-              <div class="timeline-head"><h3>Tennis Coach &amp; Operations Automation</h3><span class="timeline-period">2025 to present</span></div>
-              <p class="timeline-org">The Eight Club (FBT Complex) · Bangkok, Thailand</p>
-              <ul>
-                <li>Own daily coaching operations, including schedule coordination, payment records, customer communication, and private lesson delivery.</li>
-                <li>Built integrated tracking workflows for sessions, income, expenses, and calendar visibility, creating one view for daily and monthly review.</li>
-                <li>Standardized recurring manual records into spreadsheet-based processes to reduce duplicate entry and make discrepancies easier to investigate.</li>
-              </ul>
+            <article class="t-row">
+              <p class="t-when">2025 — now</p>
+              <div>
+                <h3>Tennis Coach &amp; Operations Automation</h3>
+                <p class="t-org">The Eight Club (FBT Complex) · Bangkok</p>
+                <ul>
+                  <li>Own daily coaching operations: scheduling, payment records, customer communication and private lessons.</li>
+                  <li>Built integrated tracking for sessions, income, expenses and calendar, one view for daily and monthly review.</li>
+                  <li>Standardized manual records into spreadsheet processes that cut duplicate entry and surface discrepancies.</li>
+                </ul>
+              </div>
             </article>
-            <article>
-              <div class="timeline-head"><h3>Engineering Intern</h3><span class="timeline-period">2022</span></div>
-              <p class="timeline-org">PK Scrap and Recycle Service Co., Ltd. · Thailand</p>
-              <ul>
-                <li>Supported preventive and corrective maintenance checks for industrial machinery in a recycling operation.</li>
-                <li>Worked with technicians to inspect equipment, understand operating workflows, and follow workplace safety standards.</li>
-              </ul>
+            <article class="t-row">
+              <p class="t-when">2022</p>
+              <div>
+                <h3>Engineering Intern</h3>
+                <p class="t-org">PK Scrap and Recycle Service Co., Ltd. · Thailand</p>
+                <ul>
+                  <li>Supported preventive and corrective maintenance checks on industrial recycling machinery.</li>
+                  <li>Inspected equipment with technicians, learned operating workflows and followed workplace safety standards.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="t-row">
+              <p class="t-when">2019 — 2025</p>
+              <div>
+                <h3>B.Eng. Mechanical Engineering</h3>
+                <p class="t-org">Zhejiang University of Technology · Hangzhou · English-taught</p>
+                <ul>
+                  <li>Thesis: Design and Development of an Automated Cable Stripping Device.</li>
+                  <li>Languages: Thai (native), English (professional), Chinese (basic).</li>
+                </ul>
+              </div>
             </article>
           </div>
-          <aside class="education-card" aria-label="Education and languages">
-            <p class="panel-label">Education</p>
-            <h3>B.Eng. Mechanical Engineering</h3>
-            <p><strong>Zhejiang University of Technology</strong><br />Hangzhou, China · English-taught · 2019 to 2025</p>
-            <p>Thesis: Design and Development of an Automated Cable Stripping Device.</p>
-            <p class="panel-label">Languages</p>
-            <p>Thai (native) · English (professional working proficiency) · Chinese (basic)</p>
-          </aside>
-        </div>
-      </section>
+        </section>
 
-      <section class="section skills-section" id="skills">
-        <div class="section-heading"><p class="eyebrow">Skill stack</p><h2>Tools I use to maintain, analyze, and automate.</h2></div>
-        <div class="skill-columns">
-          <div><h3>Infrastructure &amp; Engineering</h3><p>Mechanical systems, preventive and corrective maintenance, equipment inspection, workplace safety, AutoCAD, and SolidWorks.</p></div>
-          <div><h3>Data &amp; Automation</h3><p>Python, pandas, Excel, Google Sheets, Google Apps Script, workflow automation, anomaly detection, exception reporting, and LLM prompt design and evaluation.</p></div>
-          <div><h3>Operations</h3><p>Process standardization, operational reporting, scheduling, quality checks, and customer operations.</p></div>
-          <div><h3>Web &amp; Integration</h3><p>HTML, CSS, JavaScript, TypeScript, Next.js, Cloudflare Workers, Supabase, LINE Messaging API, and GitHub Pages.</p></div>
-        </div>
-      </section>
+        <!-- 04 STACK -->
+        <section class="section" id="stack">
+          <header class="section-head">
+            <p class="kicker"><span>04</span>/Stack</p>
+            <h2>Tools to maintain, <em>analyze and automate.</em></h2>
+          </header>
+          <div class="feature-grid">
+            <article><span>01</span><h3>Mechanical systems</h3><p>Preventive and corrective maintenance, inspection and workplace safety.</p></article>
+            <article><span>02</span><h3>CAD</h3><p>AutoCAD and SolidWorks for design and drawings.</p></article>
+            <article><span>03</span><h3>Python &amp; pandas</h3><p>Cleaning, joining and reconciling operational data.</p></article>
+            <article><span>04</span><h3>Sheets &amp; Apps Script</h3><p>Lightweight automation where the team already works.</p></article>
+            <article><span>05</span><h3>Anomaly detection</h3><p>Exception reports that point at the row that's wrong.</p></article>
+            <article><span>06</span><h3>LLM workflows</h3><p>Prompt design, evaluation and human hand-off.</p></article>
+            <article><span>07</span><h3>Messaging APIs</h3><p>LINE, Messenger and Instagram integrations.</p></article>
+            <article><span>08</span><h3>Web</h3><p>TypeScript, Next.js, Cloudflare Workers, Supabase.</p></article>
+          </div>
+        </section>
 
-      <section class="section contact-section" id="contact">
-        <div class="section-copy">
-          <p class="eyebrow">Contact</p>
-          <h2>Open to engineering, operations, and data automation roles.</h2>
-          <p>Based in Bangkok, Thailand. Available for mechanical engineering, infrastructure operations, data analyst, and automation roles.</p>
-        </div>
-        <div class="contact-actions" aria-label="Contact links">
-          <a class="button primary" href="https://github.com/Kharawat" target="_blank" rel="noreferrer">GitHub</a>
-          <button class="button ghost" type="button" data-email="phoom123@icloud.com">Copy email</button>
-        </div>
-        <p class="copy-status" role="status" aria-live="polite"></p>
-      </section>
+        <!-- CTA -->
+        <section class="cta" id="contact">
+          <div class="rings small" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <p class="kicker center"><span>05</span>/Contact</p>
+          <h2>Let's make it <em>work properly.</em></h2>
+          <p class="lede">Open to mechanical engineering, infrastructure operations, data analyst and automation roles in Bangkok.</p>
+          <div class="hero-actions">
+            <button class="btn btn-dark" type="button" data-email="phoom123@icloud.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7" /></svg>
+              <span class="btn-label">Copy email</span>
+            </button>
+            <a class="btn btn-line" href="https://github.com/Kharawat" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+          <p class="meta-line"><span>phoom123@icloud.com</span><span>Reply within a day</span></p>
+          <p class="copy-status" role="status" aria-live="polite"></p>
+        </section>
+      </div>
     </main>
 
-    <footer class="site-footer"><p>&copy; <span id="year"></span> Kharawat Areewongs. Mechanical Engineering &amp; Data Automation.</p></footer>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <svg class="footer-logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 28 L14 4 H20 L10 28 Z M16 28 L22 14 H28 L22 28 Z" /></svg>
+          <p>Kharawat (Phoom) Areewongs. Mechanical engineering, operations data and AI automation.</p>
+          <p class="mono">phoom123@icloud.com</p>
+        </div>
+        <div><p class="mono">Work</p><a href="#projects">Projects</a><a href="#approach">Approach</a><a href="#stack">Stack</a></div>
+        <div><p class="mono">Live demos</p><a href="https://kharawat.github.io/predictive-maintenance-dashboard/" target="_blank" rel="noreferrer">Predictive Maintenance</a><a href="https://kharawat.github.io/ai-workflow-dashboard/" target="_blank" rel="noreferrer">AI Workflow</a><a href="https://ai-value-chain-phoom.phoom1644.chatgpt.site/dashboard/" target="_blank" rel="noreferrer">AI Value Chain</a></div>
+        <div><p class="mono">Elsewhere</p><a href="https://github.com/Kharawat" target="_blank" rel="noreferrer">GitHub</a><a href="#contact">Contact</a></div>
+      </div>
+      <p class="footer-base mono">© <span id="year"></span> Kharawat Areewongs · Bangkok</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

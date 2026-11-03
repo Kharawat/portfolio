@@ -36,6 +36,12 @@ https://kharawat.github.io/portfolio/
 
 Open `index.html` in a browser. There is no build step.
 
+## Design
+
+Warm off-white editorial layout with a wide display wordmark, italic serif accents, mono
+uppercase labels, concentric hero rings with floating project cards, numbered `01/` sections,
+a framed grid, and light/dark themes. Fonts: Archivo, Inter, Instrument Serif, JetBrains Mono.
+
 ## Tech stack
 
 HTML · CSS · JavaScript
