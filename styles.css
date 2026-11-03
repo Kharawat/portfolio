@@ -254,11 +254,8 @@ em { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-s
 .project:hover .project-visual.v-photo > .photo-credit { transform: none; }
 .photo-credit { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 12px 7px; font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.02em; color: rgba(255,255,255,0.75); background: linear-gradient(transparent, rgba(0,0,0,0.6)); }
 .photo-credit a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
-.drs-inset { position: absolute; right: 12px; top: 12px; width: 28%; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.25); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.6); background: #0d0d10; }
-.drs-inset video { display: block; width: 100%; aspect-ratio: 800 / 520; object-fit: cover; }
-.drs-inset span { position: absolute; left: 6px; top: 6px; padding: 2px 6px; border-radius: 2px; font-family: var(--f-mono); font-size: 8.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; background: rgba(0,0,0,0.55); }
-.project:hover .project-visual.v-photo > .drs-inset { transform: none; }
-@media (max-width: 560px) { .drs-inset { width: 42%; right: 8px; top: 8px; } }
+.project-body > p.note { margin: 0 0 12px; font-size: 13.5px; color: var(--ink-2); padding-left: 12px; border-left: 2px solid var(--accent); }
+.project-body > p.note strong { color: var(--ink); font-weight: 600; }
 .passion .tag-row span:first-child { color: var(--btn-ink); background: var(--accent); padding: 1px 6px; border-radius: 2px; }
 
 /* Project visuals (pure CSS illustrations) */

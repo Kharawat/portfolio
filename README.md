@@ -1,11 +1,15 @@
-# Kharawat Areewongs | Mechanical Engineering & Data Automation Portfolio
+# Kharawat Areewongs | Engineering, Internal Systems & Automation Portfolio
 
-Portfolio website for Kharawat (Phoom) Areewongs: mechanical engineering background,
-infrastructure operations, operational data reconciliation, and AI workflow automation.
+Portfolio website for Kharawat (Phoom) Areewongs: mechanical engineer by training, now Senior
+Customer Care (CMC) at Retail Business Solutions (RBS) in Bangkok, building internal systems.
+Background in industrial maintenance, operational data reconciliation and AI workflow automation,
+plus an RB19 F1 aero model as a personal passion project.
 
 ## Focus
 
 - Mechanical systems, preventive and corrective maintenance, equipment inspection
+- Internal systems and tools for day-to-day operations
+- 3D modelling and CFD preparation with Blender and OpenFOAM
 - Operational data reconciliation with Python, pandas, Excel, and Google Sheets
 - Workflow automation with Google Apps Script, the LINE Messaging API, and LLM-based assistants
 - Dashboards and web tools with HTML, CSS, JavaScript, TypeScript, and Next.js
