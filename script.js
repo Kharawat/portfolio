@@ -55,23 +55,29 @@ copyButton.addEventListener("click", async () => {
 
 /* Active nav link + reveal on scroll */
 const navLinks = [...siteNav.querySelectorAll("a")];
-const sections = ["top", "projects", "approach", "experience", "stack"]
-  .map((id) => document.getElementById(id))
-  .filter(Boolean);
+const spyIds = ["projects", "approach", "experience", "stack"];
+const spySections = spyIds.map((id) => document.getElementById(id)).filter(Boolean);
+
+/* Highlight the section crossing 40% of the viewport; above Projects means Home */
+const updateCurrent = () => {
+  const line = innerHeight * 0.4;
+  let current = "top";
+  spySections.forEach((sec) => {
+    if (sec.getBoundingClientRect().top <= line) current = sec.id;
+  });
+  // Contact sits below Stack; keep Stack lit there
+  navLinks.forEach((a) => a.classList.toggle("is-current", a.getAttribute("href") === `#${current}`));
+};
+let spyTicking = false;
+addEventListener("scroll", () => {
+  if (spyTicking) return;
+  spyTicking = true;
+  requestAnimationFrame(() => { updateCurrent(); spyTicking = false; });
+}, { passive: true });
+addEventListener("resize", updateCurrent);
+updateCurrent();
 
 if ("IntersectionObserver" in window) {
-  const spy = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.id;
-        navLinks.forEach((a) => a.classList.toggle("is-current", a.getAttribute("href") === `#${id}`));
-      });
-    },
-    { rootMargin: "-45% 0px -50% 0px" }
-  );
-  sections.forEach((s) => spy.observe(s));
-
   const revealTargets = document.querySelectorAll(".section-head, .project, .abc article, .t-row, .feature-grid article, .cta > *:not(.rings)");
   const reveal = new IntersectionObserver(
     (entries) => {
