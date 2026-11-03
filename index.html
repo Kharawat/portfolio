@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=202611031800" />
+    <link rel="stylesheet" href="styles.css?v=202611041000" />
     <script>
       try {
         const t = localStorage.getItem("theme");
@@ -82,7 +82,7 @@
             <p class="bubble">Is the mango one sold out?</p>
             <p class="bubble me">Still 12 left today 🥭</p>
           </div>
-          <div class="floater f3 photo"><img src="assets/hero-workspace.png?v=202611031800" alt="" loading="lazy" /></div>
+          <div class="floater f3 photo"><img src="assets/hero-workspace.png?v=202611041000" alt="" loading="lazy" /></div>
           <div class="floater f4">
             <div class="mini-head"><i></i>reconcile.csv</div>
             <div class="mini-rows"><span>POS</span><span>12,480</span><span>Stock</span><span>12,480</span><span>Receipts</span><span class="warn">12,320</span></div>
@@ -127,8 +127,8 @@
       <!-- TICKER -->
       <div class="ticker" aria-hidden="true">
         <div class="ticker-track">
-          <span>Preventive maintenance</span><span>Python · pandas</span><span>Data reconciliation</span><span>Google Apps Script</span><span>LINE Messaging API</span><span>LLM evaluation</span><span>Next.js</span><span>Cloudflare Workers</span><span>SolidWorks</span><span>Anomaly detection</span>
-          <span>Preventive maintenance</span><span>Python · pandas</span><span>Data reconciliation</span><span>Google Apps Script</span><span>LINE Messaging API</span><span>LLM evaluation</span><span>Next.js</span><span>Cloudflare Workers</span><span>SolidWorks</span><span>Anomaly detection</span>
+          <span>Preventive maintenance</span><span>Python · pandas</span><span>Data reconciliation</span><span>Google Apps Script</span><span>LINE Messaging API</span><span>LLM evaluation</span><span>Next.js</span><span>Cloudflare Workers</span><span>SolidWorks</span><span>Blender · OpenFOAM</span><span>Anomaly detection</span>
+          <span>Preventive maintenance</span><span>Python · pandas</span><span>Data reconciliation</span><span>Google Apps Script</span><span>LINE Messaging API</span><span>LLM evaluation</span><span>Next.js</span><span>Cloudflare Workers</span><span>SolidWorks</span><span>Blender · OpenFOAM</span><span>Anomaly detection</span>
         </div>
       </div>
 
@@ -137,18 +137,19 @@
         <section class="section" id="projects">
           <header class="section-head">
             <p class="kicker"><span>01</span>/Projects</p>
-            <h2>Six builds. <em>One discipline.</em></h2>
-            <p class="lede">Maintenance analytics, operations data and AI automation, each one built to fix a real, recurring problem.</p>
+            <h2>Ten builds. <em>One discipline.</em></h2>
+            <p class="lede">Engineering models, operations data, AI automation and web work, each one built to fix a real problem or test a real idea.</p>
           </header>
 
           <div class="filters" role="group" aria-label="Filter projects">
-            <button class="chip is-active" type="button" data-filter="all">All <small>6</small></button>
+            <button class="chip is-active" type="button" data-filter="all">All <small>10</small></button>
+            <button class="chip" type="button" data-filter="engineering">Engineering &amp; web <small>3</small></button>
             <button class="chip" type="button" data-filter="analysis">Data &amp; analysis <small>3</small></button>
-            <button class="chip" type="button" data-filter="automation">AI &amp; automation <small>3</small></button>
+            <button class="chip" type="button" data-filter="automation">AI &amp; automation <small>4</small></button>
           </div>
 
           <div class="project-grid">
-            <article class="project" data-category="automation">
+            <article class="project wide" data-category="automation">
               <div class="project-visual v-chat" aria-hidden="true"><span></span><span></span><span></span></div>
               <div class="project-body">
                 <p class="tag-row"><span>Featured</span><span>In production</span></p>
@@ -156,6 +157,19 @@
                 <p>Multi-tenant SaaS that pulls LINE OA, Messenger and Instagram into one inbox. An AI bot replies from each shop's own menu and rules, and hands off to a person when it should.</p>
                 <ul class="stack"><li>Next.js</li><li>Cloudflare Workers</li><li>Supabase</li><li>LLM</li></ul>
                 <p class="project-foot">Private repository</p>
+              </div>
+            </article>
+
+            <article class="project wide" data-category="engineering">
+              <div class="project-visual v-flow" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><i></i></div>
+              <div class="project-body">
+                <p class="tag-row"><span>Featured</span><span>Aero &amp; 3D</span></p>
+                <h3>RB19 CFD Lab</h3>
+                <p>Photo-informed RB19 model with a rebuilt continuous underfloor and stepped diffuser, plus a working Blender DRS. The underbody passes watertight and self-intersection checks, ready for an OpenFOAM virtual wind tunnel that is still in preparation.</p>
+                <ul class="stack"><li>Blender</li><li>OpenFOAM</li><li>Python</li><li>Mesh QA</li></ul>
+                <p class="project-foot">
+                  <a href="https://github.com/Kharawat/rb19-cfd-lab" target="_blank" rel="noreferrer">Source ↗</a>
+                </p>
               </div>
             </article>
 
@@ -199,6 +213,17 @@
             </article>
 
             <article class="project" data-category="automation">
+              <div class="project-visual v-coupon" aria-hidden="true"><span><b></b></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>In use</span><span>Automation</span></p>
+                <h3>Court Coupon System, The Eight Club</h3>
+                <p>Serverless tennis-court coupon tracking. Staff log hours through a Google Form, the sheet checks expiry, balance and duplicate entries, and LINE notifies customers on every deduction. Customers can check for themselves by typing “ยอด” (balance) or “ประวัติ” (history) to the bot.</p>
+                <ul class="stack"><li>Google Apps Script</li><li>Google Sheets</li><li>Google Forms</li><li>LINE Messaging API</li></ul>
+                <p class="project-foot">Private repository</p>
+              </div>
+            </article>
+
+            <article class="project" data-category="automation">
               <div class="project-visual v-eval" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
               <div class="project-body">
                 <p class="tag-row"><span>AI evaluation</span></p>
@@ -219,6 +244,33 @@
                 <p class="project-foot">
                   <a href="https://kharawat.github.io/ai-workflow-dashboard/" target="_blank" rel="noreferrer">Live demo ↗</a>
                   <a href="https://github.com/Kharawat/ai-workflow-dashboard" target="_blank" rel="noreferrer">Source ↗</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="project" data-category="engineering">
+              <div class="project-visual v-page" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>Web design</span></p>
+                <h3>STILLROOM Landing Page</h3>
+                <p>Single-page concept for a fictional home-organising business: editorial layout, original illustration, accessible navigation and FAQ, and a local-only enquiry preview with no dependencies or trackers.</p>
+                <ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Accessibility</li></ul>
+                <p class="project-foot">
+                  <a href="https://kharawat.github.io/stillroom-landing-page-demo/" target="_blank" rel="noreferrer">Live demo ↗</a>
+                  <a href="https://github.com/Kharawat/stillroom-landing-page-demo" target="_blank" rel="noreferrer">Source ↗</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="project" data-category="engineering">
+              <div class="project-visual v-bot" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="project-body">
+                <p class="tag-row"><span>Frontend</span></p>
+                <h3>AI Chatbot Interface</h3>
+                <p>Responsive chat interface with local chat history and an API-ready UI. The public repository holds the frontend only; server code and API keys stay private.</p>
+                <ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                <p class="project-foot">
+                  <a href="https://github.com/Kharawat/ai-chatbot" target="_blank" rel="noreferrer">Source ↗</a>
                 </p>
               </div>
             </article>
@@ -349,11 +401,11 @@
         </div>
         <div><p class="mono">Work</p><a href="#projects">Projects</a><a href="#approach">Approach</a><a href="#stack">Stack</a></div>
         <div><p class="mono">Live demos</p><a href="https://kharawat.github.io/predictive-maintenance-dashboard/" target="_blank" rel="noreferrer">Predictive Maintenance</a><a href="https://kharawat.github.io/ai-workflow-dashboard/" target="_blank" rel="noreferrer">AI Workflow</a><a href="https://ai-value-chain-phoom.phoom1644.chatgpt.site/dashboard/" target="_blank" rel="noreferrer">AI Value Chain</a></div>
-        <div><p class="mono">Elsewhere</p><a href="https://github.com/Kharawat" target="_blank" rel="noreferrer">GitHub</a><a href="#contact">Contact</a></div>
+        <div><p class="mono">Elsewhere</p><a href="https://github.com/Kharawat" target="_blank" rel="noreferrer">GitHub</a><a href="https://kharawat.github.io/stillroom-landing-page-demo/" target="_blank" rel="noreferrer">STILLROOM demo</a><a href="#contact">Contact</a></div>
       </div>
       <p class="footer-base mono">© <span id="year"></span> Kharawat Areewongs · Bangkok</p>
     </footer>
 
-    <script src="script.js?v=202611031800"></script>
+    <script src="script.js?v=202611041000"></script>
   </body>
 </html>
