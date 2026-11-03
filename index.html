@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=202611041100" />
+    <link rel="stylesheet" href="styles.css?v=202611041200" />
     <script>
       try {
         const t = localStorage.getItem("theme");
@@ -82,7 +82,7 @@
             <p class="bubble">Is the mango one sold out?</p>
             <p class="bubble me">Still 12 left today 🥭</p>
           </div>
-          <div class="floater f3 photo"><img src="assets/hero-workspace.png?v=202611041100" alt="" loading="lazy" /></div>
+          <div class="floater f3 photo"><img src="assets/hero-workspace.png?v=202611041200" alt="" loading="lazy" /></div>
           <div class="floater f4">
             <div class="mini-head"><i></i>reconcile.csv</div>
             <div class="mini-rows"><span>POS</span><span>12,480</span><span>Stock</span><span>12,480</span><span>Receipts</span><span class="warn">12,320</span></div>
@@ -151,13 +151,20 @@
           <div class="project-grid">
             <article class="project wide passion" data-category="engineering">
               <figure class="project-visual v-photo">
-                <img src="assets/rb19-hero.webp?v=202611041100" alt="Render of the modified RB19 Formula 1 car model in Blender" loading="lazy" width="1280" height="800" />
+                <img src="assets/rb19-hero.webp?v=202611041200" alt="Render of the modified RB19 Formula 1 car model in Blender" loading="lazy" width="1280" height="800" />
+                <div class="drs-inset">
+                  <video autoplay muted loop playsinline preload="metadata" poster="assets/rb19-drs-poster.webp?v=202611041200" aria-label="Rear wing DRS flap opening and closing, rendered from the Blender project">
+                    <source src="assets/rb19-drs.webm?v=202611041200" type="video/webm" />
+                    <source src="assets/rb19-drs.mp4?v=202611041200" type="video/mp4" />
+                  </video>
+                  <span>DRS · Blender render</span>
+                </div>
                 <figcaption class="photo-credit">Based on “Oracle Red Bull F1 Car RB19 2023” by <a href="https://sketchfab.com/3d-models/oracle-red-bull-f1-car-rb19-2023-e4afe46f3aab4b23a418da06fc163821" target="_blank" rel="noreferrer">Redgrund</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>. Modified.</figcaption>
               </figure>
               <div class="project-body">
                 <p class="tag-row"><span>Passion project</span><span>F1 · Aero &amp; 3D</span></p>
                 <h3>RB19 CFD Lab</h3>
-                <p>Pure F1 obsession, built for fun. I took a public RB19 model and rebuilt its underfloor and stepped diffuser from race-weekend photos, then rigged a working DRS flap in Blender. The new underbody passes watertight and self-intersection checks, so it is ready for an OpenFOAM virtual wind tunnel that is still in progress.</p>
+                <p>Pure F1 obsession, built for fun. I took a public RB19 model and rebuilt its underfloor and stepped diffuser from race-weekend photos, then rigged a working DRS flap in Blender. The new underbody passes OpenFOAM surface checks; the full-car mesh and the virtual wind tunnel runs are next.</p>
                 <ul class="stack"><li>Blender</li><li>OpenFOAM</li><li>Python</li><li>Mesh QA</li></ul>
                 <p class="project-foot">
                   <a href="https://github.com/Kharawat/rb19-cfd-lab" target="_blank" rel="noreferrer">Source &amp; renders ↗</a>
@@ -412,6 +419,6 @@
       <p class="footer-base mono">© <span id="year"></span> Kharawat Areewongs · Bangkok</p>
     </footer>
 
-    <script src="script.js?v=202611041100"></script>
+    <script src="script.js?v=202611041200"></script>
   </body>
 </html>
