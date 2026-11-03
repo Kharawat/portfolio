@@ -24,6 +24,13 @@ infrastructure operations, operational data reconciliation, and AI workflow auto
 - [Predictive Maintenance Dashboard](https://kharawat.github.io/predictive-maintenance-dashboard/):
   explainable machine health score, risk category, and maintenance queue from sensor data.
   [Source](https://github.com/Kharawat/predictive-maintenance-dashboard)
+- [RB19 CFD Lab](https://github.com/Kharawat/rb19-cfd-lab): photo-informed RB19 model with a rebuilt
+  underfloor/diffuser and working Blender DRS, prepared for an OpenFOAM virtual wind tunnel.
+- **Court Coupon System, The Eight Club**: tennis-court coupon tracking with Google Apps Script,
+  Sheets, Forms and LINE notifications. Private repository.
+- [STILLROOM Landing Page](https://kharawat.github.io/stillroom-landing-page-demo/): accessible
+  single-page concept for a fictional business. [Source](https://github.com/Kharawat/stillroom-landing-page-demo)
+- [AI Chatbot Interface](https://github.com/Kharawat/ai-chatbot): responsive chat UI with local history.
 - [AI Workflow Dashboard](https://kharawat.github.io/ai-workflow-dashboard/):
   tracker for automation ideas, workflow status, expected impact, and delivery progress.
   [Source](https://github.com/Kharawat/ai-workflow-dashboard)

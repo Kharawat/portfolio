@@ -229,6 +229,11 @@ em { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-s
 .project { display: flex; flex-direction: column; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg); transition: background 0.25s; }
 .project:hover { background: var(--surface); }
 .project.is-hidden { display: none; }
+.project-grid { grid-auto-flow: dense; }
+@media (min-width: 561px) {
+  .project.wide { grid-column: span 2; }
+  .project.wide .project-visual { aspect-ratio: 32 / 10; }
+}
 .project-visual { position: relative; aspect-ratio: 16 / 10; background: var(--bg-2); border-bottom: 1px solid var(--line); overflow: hidden; }
 .project-body { padding: 22px 22px 20px; display: flex; flex-direction: column; flex: 1; }
 .project h3 { font-size: 21px; line-height: 1.15; margin: 10px 0 10px; }
@@ -262,6 +267,26 @@ em { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-s
 .v-kanban { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 12% 14%; }
 .v-kanban span { border-radius: 3px; border: 1px dashed var(--muted); background: linear-gradient(var(--surface) 0 22%, transparent 22% 28%, var(--surface) 28% 50%, transparent 50%) content-box; padding: 6px; }
 .v-kanban span:nth-child(3) { border-style: solid; border-color: var(--ink); }
+
+.v-flow { display: flex; flex-direction: column; justify-content: center; gap: 9px; padding: 0 10%; }
+.v-flow span { height: 2px; border-radius: 2px; background: linear-gradient(90deg, transparent, var(--ink) 30%, var(--ink) 70%, transparent); opacity: 0.55; transform: translateX(calc(var(--n) * 6%)) scaleX(0.9); }
+.v-flow span:nth-child(1) { --n: -1; } .v-flow span:nth-child(2) { --n: 0; } .v-flow span:nth-child(3) { --n: 1; background: linear-gradient(90deg, transparent, var(--accent) 30%, var(--accent) 70%, transparent); opacity: 1; } .v-flow span:nth-child(4) { --n: 0; } .v-flow span:nth-child(5) { --n: -1; }
+.v-flow i { position: absolute; left: 50%; top: 50%; width: 46%; height: 16%; translate: -50% -50%; background: var(--ink); clip-path: polygon(0 60%, 18% 30%, 55% 18%, 78% 0, 100% 0, 100% 100%, 0 100%); border-radius: 2px; }
+.v-coupon { display: grid; place-items: center; }
+.v-coupon span { position: relative; width: 58%; height: 42%; border: 1px dashed var(--muted); border-radius: 6px; background: var(--surface); }
+.v-coupon span::before, .v-coupon span::after { content: ""; position: absolute; top: 50%; width: 14px; height: 14px; border-radius: 50%; background: var(--bg-2); border: 1px dashed var(--muted); translate: 0 -50%; }
+.v-coupon span::before { left: -8px; } .v-coupon span::after { right: -8px; }
+.v-coupon b { position: absolute; left: 14%; right: 14%; bottom: 26%; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--accent) 0 65%, var(--line) 65%); }
+.v-page { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-rows: auto 1fr auto; gap: 8px; padding: 9% 14%; }
+.v-page span { border-radius: 3px; background: var(--surface); border: 1px solid var(--line); }
+.v-page span:nth-child(1) { grid-column: 1 / -1; height: 10px; }
+.v-page span:nth-child(2) { background: linear-gradient(var(--ink) 0 22%, transparent 22% 34%, var(--muted) 34% 42%, transparent 42%); border: 0; }
+.v-page span:nth-child(3) { background: radial-gradient(circle at 60% 70%, var(--accent) 0 18%, transparent 19%), var(--surface); }
+.v-page span:nth-child(4) { grid-column: 1 / -1; height: 10px; }
+.v-bot { display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 0 22%; }
+.v-bot span { height: 20px; border-radius: 10px; width: 60%; background: var(--surface); border: 1px solid var(--line); }
+.v-bot span:nth-child(2) { align-self: flex-end; width: 45%; background: var(--accent); border-color: var(--accent); }
+.v-bot span:nth-child(3) { width: 30%; background: radial-gradient(circle, var(--muted) 0 3px, transparent 4px) 0 50% / 14px 100% repeat-x content-box, var(--surface); padding: 0 10px; }
 
 /* ABC */
 .abc { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
